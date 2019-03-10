@@ -32,15 +32,16 @@ public class MainActivity extends AppCompatActivity {
 
 
         button.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 val1 = randomNumber();
                 val2 = randomNumber();
                 Log.d("ololo", "dice " + val1);
 
-                int res1 = getResources().getIdentifier("dice" + val1, "drawable", "com.kubatov.ikosty");
-                int res2 = getResources().getIdentifier("dice" + val2, "drawable", "com.kubatov.ikosty");
+                int res1 = getResources()
+                        .getIdentifier("dice" + val1, "drawable", "com.kubatov.ikosty");
+                int res2 = getResources()
+                        .getIdentifier("dice" + val2, "drawable", "com.kubatov.ikosty");
 
                 imageView1.setImageResource(res1);
                 imageView2.setImageResource(res2);
